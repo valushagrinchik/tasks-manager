@@ -1,10 +1,11 @@
+import { SortFields } from '@/shared/constants';
+import { Task, TaskStatus } from '@/shared/types';
+import { sortTasks } from '@/shared/utils';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { v4 as uuidv4 } from 'uuid';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
-import { SortFields } from '../constants';
-import { Task, TaskStatus } from '../types';
-import { sortTasks } from '../utils';
+
 
 type TasksStore = {
     sortBy: {

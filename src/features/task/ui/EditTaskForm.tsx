@@ -1,9 +1,9 @@
-import { useTasksStore } from '@/shared/stores/useTasksStore';
+import { useTasksStore } from '@/entities/task';
 import { Task, TaskStatus } from '@/shared/types';
 import { Button, Datepicker, IndexPath, Input, Select, SelectItem, Text } from "@ui-kitten/components";
 import { Controller, useForm } from 'react-hook-form';
 import { View } from 'react-native';
-import { CalendarIcon } from '../../components/icons';
+import { CalendarIcon } from '../../../entities/icons';
 
 type EditTaskFormProps = {
     id?: string,
@@ -70,7 +70,7 @@ export const EditTaskForm = ({ id, onSubmit, onCancel }: EditTaskFormProps) => {
                             onChangeText={onChange}
                             value={value}
                             disabled={editMode}
-                            style={{
+                            textStyle={{
                                 minHeight: 64,
                             }}
                         />

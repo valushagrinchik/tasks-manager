@@ -1,5 +1,5 @@
-import { EditTaskForm } from '@/entities/task/EditTaskForm';
-import { useTasksStore } from '@/shared/stores/useTasksStore';
+import { useTasksStore } from '@/entities/task';
+import { EditTaskForm } from '@/features/task';
 import { useRouter } from 'expo-router';
 import { ScrollView } from 'react-native';
 
