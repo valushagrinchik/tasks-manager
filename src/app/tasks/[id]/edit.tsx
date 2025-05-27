@@ -10,7 +10,7 @@ export default function EditTaskScreen() {
 
     const onSubmit = (data: any) => {
         updateTask(data)
-        router.navigate('/tasks')
+        router.back()
     };
     const onCancel = () => {
         router.back()

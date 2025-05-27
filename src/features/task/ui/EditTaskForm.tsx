@@ -1,6 +1,7 @@
 import { useTasksStore } from '@/entities/task';
 import { Task, TaskStatus } from '@/shared/types';
 import { Button, Datepicker, IndexPath, Input, Select, SelectItem, Text } from "@ui-kitten/components";
+import { useEffect, useMemo } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { View } from 'react-native';
 import { CalendarIcon } from '../../../entities/icons';
@@ -15,13 +16,23 @@ export const EditTaskForm = ({ id, onSubmit, onCancel }: EditTaskFormProps) => {
 
     const { tasks } = useTasksStore()
 
-    const task: Omit<Task, 'id' | 'createdAt'> = id && tasks.find(task => task.id === id) || {
-        title: '',
-        description: '',
-        date: null,
-        location: '',
-        status: TaskStatus.Pending,
-    }
+    const task = useMemo<Omit<Task, 'id' | 'createdAt'>>(() => {
+        return id
+            ? tasks.find((task) => task.id === id) ?? {
+                title: '',
+                description: '',
+                date: null,
+                location: '',
+                status: TaskStatus.Pending,
+            }
+            : {
+                title: '',
+                description: '',
+                date: null,
+                location: '',
+                status: TaskStatus.Pending,
+            };
+    }, [id, tasks]);
 
     const { control, handleSubmit, formState: { errors }, reset } = useForm<Task & { statusIndex: IndexPath }>({
         defaultValues: {
@@ -30,13 +41,20 @@ export const EditTaskForm = ({ id, onSubmit, onCancel }: EditTaskFormProps) => {
         }
     });
 
+    useEffect(() => {
+        reset({
+        ...task,
+        statusIndex: new IndexPath(Object.values(TaskStatus).findIndex(status => status === task.status)),
+        });
+    }, [id, reset]);
+
     const _onCancel = () => {
         onCancel()
-        reset(); 
+        reset();
     }
     const _onSubmit = (data: Task & { statusIndex: IndexPath }) => {
         onSubmit({ ...data, status: Object.values(TaskStatus)[data.statusIndex.row] })
-        reset(); 
+        reset();
     }
 
     return <View style={{ flex: 1, justifyContent: 'space-between' }}>

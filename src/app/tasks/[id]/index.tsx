@@ -8,7 +8,7 @@ export default function ViewTaskScreen() {
     const task = tasks.find(task => task.id === id)
 
     if(!task){
-        router.navigate('/tasks')
+        router.back()
     }
 
     return <TaskFullCard task={task as Task}/>

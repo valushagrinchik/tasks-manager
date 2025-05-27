@@ -9,7 +9,7 @@ export default function NewTaskScreen() {
 
     const onSubmit = (data: any) => {
         addTask(data)
-        router.navigate('/tasks')
+        router.back()
     };
 
     const onCancel = () => {

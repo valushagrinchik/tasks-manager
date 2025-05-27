@@ -8,7 +8,7 @@ export default function TaskListScreen() {
     const router = useRouter()
 
     const createNewTask = async () => {
-        router.navigate('/tasks/new')
+        router.push('/tasks/new')
     }
 
     return <View   style={{ flex: 1,gap: 16 , justifyContent: 'space-between' }}>
