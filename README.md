@@ -1,24 +1,39 @@
 # Tasks manager
 
-React Native test task 
+The project built using React Native with Expo. 
 
-## Tech stack
+It allows users to:
+- Create, edit, delete and view tasks
+- Manage task status
+- Schedule tasks using a date picker
+- Sort tasks by status and date created
 
-React Native, Expo, 
-Zustand 
-react-hook-form - performant, flexible and extensible form library
-UI Kitten - React Native UI Library based on Eva Design System. The framework contains a set of general-purpose UI components styled in a similar way.
+The main logic includes:
+- A global state management system for tasks using Zustand
+- Forms with validation and submission using react-hook-form
+- A clean and responsive UI with UI Kitten
 
+The architecture of code follows the FSD methodology. This structure improves scalability and maintainability by organizing code into clear layers: 
+- entities/ - includes state and simple ui components
+- features/ - UI logic for task editing and rendering list with sort
+- shared/ - common UI components, data and types
 
-- In your email, include:
+Demo is [here](/demo.mp4)
 
+## Technology Stack
 
-
-    - Description of the code and technologies used
-
-    - Comments on the code where necessary
-
-    - Explanation of your technology stack and reasoning behind your choices
-
-
-Tech stack React Native, Expo, Zustand , react-hook-form, UI Kitten 
+- React Native	
+Cross-platform mobile development	                   
+Fast dev and native performance
+- Expo	        
+Simplifies development and deployment	               
+Easy setup, OTA updates, dev tools
+- Zustand  	    
+Lightweight global state management	                 
+Simple API, avoids Redux boilerplate
+- react-hook-form	
+Manage form state and validation	                 
+Minimal re-renders, better performance
+- UI Kitten	    
+UI framework for consistent and styled components	   
+Theme support and production-ready UI
