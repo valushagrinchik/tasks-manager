@@ -1,5 +1,5 @@
-import { SortFields } from '@/shared/constants';
-import { Task, TaskStatus } from '@/shared/types';
+import { mockedData } from '@/shared/data';
+import { SortFields, Task } from '@/shared/types';
 import { sortTasks } from '@/shared/utils';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { v4 as uuidv4 } from 'uuid';
@@ -31,15 +31,7 @@ export const useTasksStore = create<TasksStore>()(
                 field: SortFields.Status,
                 asc: true
             },
-            tasks: [{
-                id: '123',
-                title: 'First Task',
-                description: 'First Task Desc',
-                date: new Date(),
-                location: "string",
-                status: TaskStatus.Pending,
-                createdAt: new Date()
-            }],
+            tasks: mockedData,
             setSortBy: (sortBy: {
                 field: SortFields,
                 asc: boolean

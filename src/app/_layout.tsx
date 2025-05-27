@@ -1,16 +1,14 @@
 
 import { myTheme } from '@/shared/theme';
 import * as eva from '@eva-design/eva';
-import { ApplicationProvider, IconRegistry, ModalService } from '@ui-kitten/components';
+import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import { Stack } from 'expo-router';
+
+// A polyfill to make the uuid package work in a React Native project
 import 'react-native-get-random-values';
 
-ModalService.setShouldUseTopInsets = true //applies StatusBar additional offset
-
 export default function Layout() {
-
-
   return <>
     <IconRegistry icons={EvaIconsPack} />
     <ApplicationProvider {...eva} theme={myTheme}>

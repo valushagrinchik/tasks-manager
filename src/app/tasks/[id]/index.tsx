@@ -1,4 +1,4 @@
-import { TaskFullCard, useTasksStore } from '@/entities/task';
+import { TaskFullCard, useTasksStore } from '@/entities/tasks';
 import { Task } from "@/shared/types";
 import { router, useLocalSearchParams } from "expo-router";
 

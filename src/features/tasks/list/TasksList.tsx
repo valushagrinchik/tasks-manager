@@ -1,11 +1,11 @@
-import { TaskCard, useTasksStore } from '@/entities/task';
+import { TaskCard, useTasksStore } from '@/entities/tasks';
 import { Task } from "@/shared/types";
 import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import { ScrollView, View } from "react-native";
-import { ConfirmationModal } from "../../../entities/task/ui/ConfirmationModal";
+import { ConfirmationModal } from "../../../shared/components/ConfirmationModal";
 
-export const TaskList = () => {
+export const TasksList = () => {
     const router = useRouter()
 
     const { getTasks, deleteTask, sortBy, tasks: storedTasks } = useTasksStore()

@@ -6,8 +6,3 @@ export const taskStatusMap = {
     [TaskStatus.Completed]: "primary",
     [TaskStatus.Cancelled]: "danger"
 }
-
-export enum SortFields {
-    Status = "Status",
-    CreatedAt = "CreatedAt"
-}

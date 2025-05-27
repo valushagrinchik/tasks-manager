@@ -1,10 +1,10 @@
+import { DeleteIcon, EditIcon } from "@/shared/components";
 import { taskStatusMap } from "@/shared/constants";
 import { Task } from "@/shared/types";
 import { Card, Text } from "@ui-kitten/components";
 import dayjs from 'dayjs';
 import { router } from "expo-router";
 import { Pressable, View } from "react-native";
-import { DeleteIcon, EditIcon } from "../../../icons";
 
 export const TaskCard = ({ task, onDeleteBtnClick }: { task: Task, onDeleteBtnClick: () => void }) => {
     return <Card onPress={() => {

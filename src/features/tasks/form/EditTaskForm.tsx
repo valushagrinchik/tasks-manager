@@ -1,10 +1,10 @@
-import { useTasksStore } from '@/entities/task';
+import { useTasksStore } from '@/entities/tasks';
+import { CalendarIcon } from '@/shared/components';
 import { Task, TaskStatus } from '@/shared/types';
 import { Button, Datepicker, IndexPath, Input, Select, SelectItem, Text } from "@ui-kitten/components";
 import { useEffect, useMemo } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { View } from 'react-native';
-import { CalendarIcon } from '../../../entities/icons';
 
 type EditTaskFormProps = {
     id?: string,

@@ -1,10 +1,3 @@
-export enum TaskStatus {
-    Pending = "Pending",
-    InProgress = "InProgress",
-    Completed = "Completed",
-    Cancelled = "Cancelled"
-}
-
 export type Task = {
     id: string
     title: string
@@ -13,4 +6,16 @@ export type Task = {
     location: string
     status: TaskStatus
     createdAt: Date
+}
+
+export enum SortFields {
+    Status = "Status",
+    CreatedAt = "CreatedAt"
+}
+
+export enum TaskStatus {
+    Pending = "Pending",
+    InProgress = "InProgress",
+    Completed = "Completed",
+    Cancelled = "Cancelled"
 }

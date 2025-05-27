@@ -1,5 +1,4 @@
-import { SortFields } from "../constants";
-import { Task } from "../types";
+import { SortFields, Task } from "../types";
 
 export const sortTasks = (tasks: Task[], field: SortFields, asc: boolean) => {
     return [...tasks].sort((a, b) => {

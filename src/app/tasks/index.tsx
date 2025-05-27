@@ -1,5 +1,4 @@
-import { SortByField } from "@/entities/task/ui/SortByField";
-import { TaskList } from "@/features/task";
+import { TasksList, TasksSort } from "@/features/tasks";
 import { Button, Text } from "@ui-kitten/components";
 import { useRouter } from "expo-router";
 import { View } from "react-native";
@@ -13,8 +12,8 @@ export default function TaskListScreen() {
 
     return <View   style={{ flex: 1,gap: 16 , justifyContent: 'space-between' }}>
         <Text category='h1' style={{ textAlign: 'center' }}>Tasks manager</Text>
-        <SortByField />
-        <TaskList/>
+        <TasksSort />
+        <TasksList/>
         <Button onPress={createNewTask} size="large">New Task</Button>
     </View>
 }

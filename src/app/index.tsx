@@ -12,6 +12,7 @@ export default function HomeScreen() {
 
       try {
         await new Promise(resolve => setTimeout(resolve, 100));
+        // Navigate to the tasks page after splash screen
         router.replace('/tasks'); 
       } catch (err) {
         console.error(err);

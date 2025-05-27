@@ -1,10 +1,10 @@
-import { SortFields } from "@/shared/constants";
+import { SortIcon } from "@/shared/components";
+import { SortFields } from "@/shared/types";
 import { Button, IndexPath, Select, SelectItem } from "@ui-kitten/components";
 import { View } from "react-native";
-import { SortIcon } from "../../icons";
-import { useTasksStore } from '../store/useTasksStore';
+import { useTasksStore } from '../../../entities/tasks/store/useTasksStore';
 
-export const SortByField = () => {
+export const TasksSort = () => {
     const sortFields = Object.values(SortFields)
     const {sortBy, setSortBy} = useTasksStore()
 
