@@ -1,50 +1,63 @@
-# Welcome to your Expo app 👋
+# Tasks manager
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+React Native test task 
 
-## Get started
+## Requirements
 
-1. Install dependencies
+Develop a Mobile Application for Managing Tasks
+Objective: Evaluate your basic skills in mobile application development using React Native.
 
-   ```bash
-   npm install
-   ```
+Requirements:
+1. Development Platform:
+   - Use React Native to develop the application.
+2. Application Functionality:
+   - Add a New Field Task:
+     - Task Title
+     - Task Description
+     - Date and Time of Execution
+     - Location (manual address input)
+   - Display Task List:
+     - List all tasks with key information (title, date/time, status)
+     - Ability to sort tasks by date added or status
+   - Manage Tasks:
+     - Mark task as "In Progress", "Completed", or "Cancelled"
+     - Delete task
+     - View detailed information about the task
+3. Application Appearance:
+   - User-friendly and intuitive interface
+   - Use modern design components
+   - Pleasant and consistent color scheme
+4. Additional Requirements:
+   - Local Storage:
+     - Save all data locally (e.g., using AsyncStorage) to ensure data persistence after closing the application
+   - Clean Code:
+     - Adhere to clean code principles: meaningful variable names, comments, structured and readable code
+   - Validation and Error Handling:
+     - Validate input data for correctness and inform the user of any errors
+---
 
-2. Start the app
+Expected Deliverables:
+- Application Source Code:
+  - Upload the source code to GitHub or another repository; provide the link
+- Video Demonstration:
+  - Record a video demonstrating the main functions of the application (focus on showcasing the application's functionality)
+- Submission:
+  - Send the APK file and the video to malika@salesautomators.com
+  - In your email, include:
+    - Description of the code and technologies used
+    - Comments on the code where necessary
+    - Explanation of your technology stack and reasoning behind your choices
+---
 
-   ```bash
-   npx expo start
-   ```
+Deadline: 3 days
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Evaluation Criteria:
+1. Compliance with the assignment requirements
+2. Correct functioning of all features
+3. Cleanliness and structure of the code
+4. Usability and aesthetics of the interface
+5. Quality of the video demonstration
+6. Direct link to a google drive video with link access for anyone. If your video will be not accessible your test task will be declined.
+---

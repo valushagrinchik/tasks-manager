@@ -1,7 +1,7 @@
 import { useTasksStore } from '@/entities/task';
 import { EditTaskForm } from '@/features/task';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { ScrollView } from 'react-native';
+import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
 
 export default function EditTaskScreen() {
     const { id } = useLocalSearchParams()
@@ -16,8 +16,14 @@ export default function EditTaskScreen() {
         router.back()
     }
     return (
-        <ScrollView contentContainerStyle={{ flexGrow: 1 }} >
-            <EditTaskForm id={id as string} onSubmit={onSubmit} onCancel={onCancel} />
-        </ScrollView>
+        <KeyboardAvoidingView
+            behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+            style={{ flex: 1 }}
+        >
+            <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'space-between', padding: 16 }}>
+                <EditTaskForm id={id as string} onSubmit={onSubmit} onCancel={onCancel} />
+
+            </ScrollView>
+        </KeyboardAvoidingView>
     );
 }

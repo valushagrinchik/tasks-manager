@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "taskmanagermobile",
+    "scheme": "tasksmanager",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.valista.tasksmanager"
     },
     "web": {
       "bundler": "metro",
@@ -38,8 +39,11 @@
     "experiments": {
       "typedRoutes": true
     },
-    "splash": {
-      "autohide": false
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "3b5c518c-4b50-44ae-a216-4180113ac8a2"
+      }
     }
   }
 }

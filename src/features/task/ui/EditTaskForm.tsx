@@ -23,16 +23,20 @@ export const EditTaskForm = ({ id, onSubmit, onCancel }: EditTaskFormProps) => {
         status: TaskStatus.Pending,
     }
 
-    const { control, handleSubmit, formState: { errors } } = useForm<Task & { statusIndex: IndexPath }>({
+    const { control, handleSubmit, formState: { errors }, reset } = useForm<Task & { statusIndex: IndexPath }>({
         defaultValues: {
             ...task,
             statusIndex: new IndexPath(Object.values(TaskStatus).findIndex(status => status === task?.status))
         }
     });
 
-
+    const _onCancel = () => {
+        onCancel()
+        reset(); 
+    }
     const _onSubmit = (data: Task & { statusIndex: IndexPath }) => {
         onSubmit({ ...data, status: Object.values(TaskStatus)[data.statusIndex.row] })
+        reset(); 
     }
 
     return <View style={{ flex: 1, justifyContent: 'space-between' }}>
@@ -139,7 +143,7 @@ export const EditTaskForm = ({ id, onSubmit, onCancel }: EditTaskFormProps) => {
             </View>
         </View>
         <View style={{ flexDirection: 'row', gap: 8, justifyContent: 'space-between' }}>
-            <Button style={{ flex: 1 }} size="large" onPress={onCancel} appearance="outline">Cancel</Button>
+            <Button style={{ flex: 1 }} size="large" onPress={_onCancel} appearance="outline">Cancel</Button>
             <Button style={{ flex: 1 }} size="large" onPress={handleSubmit(_onSubmit)}>Submit</Button>
         </View>
     </View>

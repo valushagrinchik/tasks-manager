@@ -9,6 +9,8 @@ import 'react-native-get-random-values';
 ModalService.setShouldUseTopInsets = true //applies StatusBar additional offset
 
 export default function Layout() {
+
+
   return <>
     <IconRegistry icons={EvaIconsPack} />
     <ApplicationProvider {...eva} theme={myTheme}>
